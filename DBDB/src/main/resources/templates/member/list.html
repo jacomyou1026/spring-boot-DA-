@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>휴대번호</th>
+        </tr>
+        <tr th:each="row :${list}">
+            <td th:text="${row.id}"></td>
+            <td th:text="${row.name}"></td>
+            <td th:text="${row.phone}"></td>
+        </tr>
+        <tr>
+            <td> <button type="button"  value="삭제"/></td>
+            <td><button type="button" th:href="member/rewrite" value="수정"/></td>
+
+            </td><button type="button" value="등록"/></td>
+
+        </tr>
+    </table>
+
+</body>
+</html>

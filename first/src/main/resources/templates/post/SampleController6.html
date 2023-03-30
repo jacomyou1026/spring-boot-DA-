@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>SampleController5View</title>
+</head>
+<body>
+
+<div>
+  <h3 th:text="${ heading }">제목</h3>
+  <p>사용자가 입력한 책 정보</p>
+  <table cellpadding=10 border=1>
+
+    <tr>
+      <td>Title</td>
+    </tr>
+    <tr>
+      <td>num</td>
+      <td>
+        <input type="text" th:value="${ boardDTO.getNum()}" readonly>
+      </td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>
+        <input type="text" th:value="${ boardDTO.getBname()}" readonly>
+      </td>
+    </tr>
+    <tr>
+      <td>titlee</td>
+      <td>
+        <input type="text" th:value="${ boardDTO.getBtitle() }" readonly>
+      </td>
+    </tr>
+
+  </table>
+</div>
+
+</body>
+</html>
